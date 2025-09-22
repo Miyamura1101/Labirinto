@@ -1,26 +1,27 @@
+from ast import If, While
 import os
 import random
-import termios
-import tty
-import sys
 from Puzzles import PuzzleSQL
+from Sala import Sala
 
 dicas = [
     "🔍 Guardanapo com manchas de tinta colorida e um rascunho de pintura. Alguém parecia nervoso.",
-    "🔍 Um prendedor de cabelo delicado com um cabelo ruivo enrolado. Parece que alguém deixou cair às pressas.",
+    "🔍 Bilhete rasgado mencionando um encontro 'na mansão à noite'.",
     "🔍 Pulseira com pedras coloridas quebrada, como se tivesse sido puxada com força durante uma discussão."
 ]
 
 def getch():
-        """Lê um caractere do teclado sem precisar do Enter"""
-        fd = sys.stdin.fileno()
-        old_settings = termios.tcgetattr(fd)
-        try:
-            tty.setraw(fd)
-            ch = sys.stdin.read(1)
-        finally:
-            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-        return ch
+    import sys, termios, tty
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)
+        ch = sys.stdin.read(1)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+    return ch
+
+
 class Jogo:
     def __init__(self, salas):
         self.salas = salas
@@ -187,9 +188,12 @@ class Jogo:
         while True:
             os.system("cls" if os.name == "nt" else "clear")
             self.mostrar()
-            
-            print("Digite comando (w/a/s/d/q): ")
-            comando = getch().lower()
+
+            if os.name == "nt":
+                comando = input("Digite comando (w/a/s/d/q): ").lower()
+            else:
+                print("Digite comando (w/a/s/d/q): ")
+                comando = getch().lower()
 
             if comando == "q":
                 print("Saindo do jogo...")
