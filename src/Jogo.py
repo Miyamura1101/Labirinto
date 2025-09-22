@@ -1,6 +1,8 @@
 import os
 import random
-import re
+import termios
+import tty
+import sys
 from Puzzles import PuzzleSQL
 
 dicas = [
@@ -9,6 +11,16 @@ dicas = [
     "🔍 Pulseira com pedras coloridas quebrada, como se tivesse sido puxada com força durante uma discussão."
 ]
 
+def getch():
+        """Lê um caractere do teclado sem precisar do Enter"""
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        try:
+            tty.setraw(fd)
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        return ch
 class Jogo:
     def __init__(self, salas):
         self.salas = salas
@@ -19,9 +31,9 @@ class Jogo:
         self.dicas_por_posicao = {}
 
     def processar_enigma(self):
-        if self.chaves_coletadas == 0:
+        if self.chaves_coletadas <= 1:
             dificuldade = "faceis"
-        elif self.chaves_coletadas == 1:
+        elif self.chaves_coletadas == 2:
             dificuldade = "medias"
         else:
             dificuldade = "dificeis"
@@ -175,7 +187,10 @@ class Jogo:
         while True:
             os.system("cls" if os.name == "nt" else "clear")
             self.mostrar()
-            comando = input("Digite comando (w/a/s/d/q): ").lower()
+            
+            print("Digite comando (w/a/s/d/q): ")
+            comando = getch().lower()
+
             if comando == "q":
                 print("Saindo do jogo...")
                 break
