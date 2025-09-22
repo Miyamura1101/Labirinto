@@ -33,6 +33,7 @@ python3 --version
 | `s`   | Baixo     |
 | `a`   | Esquerda  |
 | `d`   | Direita   |
+| `q`   | Sair      |
 
 3. Símbolos do jogo:
 
