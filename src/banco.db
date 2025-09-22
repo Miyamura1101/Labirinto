@@ -1,0 +1,37 @@
+CREATE TABLE pessoas (
+    id INTEGER PRIMARY KEY,
+    nome TEXT,
+    profissao TEXT,
+    divida REAL
+);
+
+CREATE TABLE locais (
+    id INTEGER PRIMARY KEY,
+    nome TEXT
+);
+
+CREATE TABLE visitas (
+    id INTEGER PRIMARY KEY,
+    pessoa_id INTEGER,
+    local_id INTEGER,
+    data TEXT,
+    FOREIGN KEY (pessoa_id) REFERENCES pessoas(id),
+    FOREIGN KEY (local_id) REFERENCES locais(id)
+);
+
+INSERT INTO pessoas (nome, profissao, divida) VALUES
+('Ana', 'Advogada', 0),
+('Bruno', 'Empresário', 5000),
+('Clara', 'Estudante', 200),
+('Diego', 'Professor', 0),
+('Elisa', 'Médica', 0);
+
+INSERT INTO locais (nome) VALUES
+('Museu'), ('Banco'), ('Biblioteca');
+
+INSERT INTO visitas (pessoa_id, local_id, data) VALUES
+(1, 1, '2025-09-10'), -- Ana no Museu
+(2, 1, '2025-09-10'), -- Bruno no Museu
+(3, 2, '2025-09-10'), -- Clara no Banco
+(4, 3, '2025-09-10'), -- Diego na Biblioteca
+(2, 2, '2025-09-11'); -- Bruno no Banco

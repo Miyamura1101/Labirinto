@@ -1,4 +1,6 @@
-import os 
+import os
+import random
+from Puzzles import PuzzleSQL
 from Sala import Sala
 
 
@@ -8,6 +10,52 @@ class Jogo:
         self.sala_atual = salas[0]  # Começa na sala 01
         self.jogador_pos = self.sala_atual.posicao_jogador
         self.chaves_coletadas = 0
+
+    def processar_enigma(self):
+        if self.chaves_coletadas == 0:
+            dificuldade = "faceis"
+        elif self.chaves_coletadas == 1:
+            dificuldade = "medias"
+        else:
+            dificuldade = "dificeis"
+
+        puzzle = PuzzleSQL.escolher_puzzle(dificuldade)
+
+        print("\n=== ENIGMA SQL ===")
+        print(puzzle["pergunta"])
+
+        resposta_jogador = input("Digite sua resposta (separe itens por vírgula):\n> ")
+
+        correto = PuzzleSQL.validar_resposta(resposta_jogador, puzzle["resposta_esperada"])
+        if correto:
+            mensagem = "✅ Enigma resolvido!"
+  
+            i_atual, j_atual = self.jogador_pos
+            self.sala_atual.grid[i_atual][j_atual] = 'L'
+        
+            outras_posicoes = []
+            for sala in self.salas:
+                if sala != self.sala_atual:
+                    for pos in sala.enigmas:
+                        i, j = pos
+                        if sala.grid[i][j] == 'E':
+                            outras_posicoes.append((sala, pos))
+            
+            if outras_posicoes:
+                nova_sala, nova_pos = random.choice(outras_posicoes)
+                i_nova, j_nova = nova_pos
+    
+                self.sala_atual = nova_sala
+                self.jogador_pos = nova_pos
+                
+                # Marca a posição de destino como 'L'
+                self.sala_atual.grid[i_nova][j_nova] = 'L'
+    
+                mensagem += " Você se moveu para outra pista na sala e a porta foi liberada!"
+            return mensagem
+        else:
+            return "❌ Resposta incorreta."
+
 
     def mostrar(self):
         """Mostra a sala atual com a posição do jogador"""
@@ -51,7 +99,7 @@ class Jogo:
         celula = self.sala_atual.grid[i][j]
 
         if celula == "E":
-            return "Você encontrou um ENIGMA! Resolva para prosseguir."
+            input(self.processar_enigma())
         elif celula == "D":
             return "Você encontrou uma DICA!"
         elif celula == "K":
