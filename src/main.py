@@ -3,7 +3,6 @@ from Sala import Sala
 from Jogo import Jogo
 import pygame
 
-# Caminho da pasta "salas" relativo a este arquivo
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PASTA_SALAS = os.path.join(BASE_DIR, "salas")
 

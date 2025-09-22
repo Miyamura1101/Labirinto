@@ -34,9 +34,5 @@
     {
       "pergunta": "Qual estudante aparece nos registros?",
       "resposta_esperada": [["Clara"]]
-    },
-    {
-      "pergunta": "Quais amigos de infância de Joana aparecem nos registros?",
-      "resposta_esperada": [["Elisa"]]
     }
 ]

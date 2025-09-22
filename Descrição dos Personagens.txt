@@ -1,6 +1,6 @@
 1. Ana – Advogada
 Idade: 32
-Cabelo: Castanho escuro, liso
+Cabelo: Ruivo vibrante, liso
 Olhos: Verdes
 Altura: 1,68m
 Traços de personalidade: Inteligente, persuasiva, calma sob pressão, ética profissional elevada
@@ -27,7 +27,7 @@ Detalhes extras: Sempre carrega um caderno de anotações.
 
 4. Diego – Professor
 Idade: 40
-Cabelo: Castanho claro, curto
+Cabelo: Ruivo, medio longo
 Olhos: Cinzentos
 Altura: 1,75m
 Traços de personalidade: Racional, crítico, reservado, respeitoso
@@ -45,7 +45,7 @@ Detalhes extras: Sempre carrega um estetoscópio e cadernos de anotações médi
 
 6. Gabriela – Artista
 Idade: 28
-Cabelo: Ruivo vibrante, ondulado
+Cabelo: Ruivo, ondulado
 Olhos: Verdes claros
 Altura: 1,67m
 Traços de personalidade: Criativa, impulsiva, competitiva, dramática

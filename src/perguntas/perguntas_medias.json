@@ -12,31 +12,31 @@
     "resposta_esperada": [["Elisa"]]
   },
   {
-    "pergunta": "Quem foi visto no Café Central tanto em 2025-09-10 quanto em 2025-09-11?",
-    "resposta_esperada": [["Fábio"]]
-  },
-  {
-    "pergunta": "Quem foi visto na Mansão Aurora em 2025-09-10 e também em 2025-09-11?",
-    "resposta_esperada": [["Henrique"]]
-  },
-  {
     "pergunta": "Liste todos os suspeitos que não possuem dívida.",
     "resposta_esperada": [["Ana"], ["Diego"], ["Elisa"], ["Fábio"], ["Gabriela"], ["Henrique"]]
-  },
-  {
-    "pergunta": "Quem era artista e esteve na Mansão no dia do crime?",
-    "resposta_esperada": [["Gabriela"]]
-  },
-  {
-    "pergunta": "Quem é professor e esteve no Clube Noturno no dia 2025-09-10?",
-    "resposta_esperada": [["Diego"]]
   },
   {
     "pergunta": "Quem esteve em locais diferentes nos dois dias (2025-09-10 e 2025-09-11)?",
     "resposta_esperada": [["Bruno"], ["Clara"], ["Elisa"], ["Fábio"], ["Gabriela"], ["Henrique"]]
   },
   {
-    "pergunta": "Quem possuía relação conflituosa com Joana e esteve na Mansão Aurora no dia 2025-09-11?",
-    "resposta_esperada": [["Bruno"], ["Gabriela"]]
+    "pergunta": "Quem tem cabelo Ruivo?",
+    "resposta_esperada": [["Ana"], ["Diego"], ["Gabriela"]]
+  },
+  {
+    "pergunta": "Quem tem cabelo Preto?",
+    "resposta_esperada": [["Bruno"], ["Elisa"], ["Fábio"]]
+  },
+  {
+    "pergunta": "Quem tem cabelo Ruivo e tem menos de 35 anos?",
+    "resposta_esperada": [["Gabriela"]]
+  },
+  {
+    "pergunta": "Quem tem cabelo Preto e tem mais de 35 anos?",
+    "resposta_esperada": [["Bruno"], ["Elisa"], ["Fábio"]]
+  },
+  {
+    "pergunta": "Quem tem cabelo Loiro escuro e menos de 25 anos?",
+    "resposta_esperada": [["Clara"]]
   }
 ]

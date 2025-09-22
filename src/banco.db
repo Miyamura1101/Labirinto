@@ -5,6 +5,7 @@ Drop TABLE Shippings;
 CREATE TABLE pessoas (
     id INTEGER PRIMARY KEY,
     nome TEXT,
+    cor_cabelo,
     idade INTEGER,
     profissao TEXT,
     divida REAL,
@@ -27,14 +28,14 @@ CREATE TABLE visitas (
     FOREIGN KEY (local_id) REFERENCES locais(id)
 );
 
-INSERT INTO pessoas (nome, idade, profissao, divida, relacao_com_joana, motivo_oculto, suspeito) VALUES
-('Ana', 32, 'Advogada', 0, 'Amiga e conselheira legal de Joana', 'Nenhum',1),
-('Bruno', 45, 'Empresário', 5000, 'Devedor que Joana recusou ajudar', 'Ganância',1),
-('Clara', 20, 'Estudante', 200, 'Recebia ajuda de Joana, mas estava prestes a perder a bolsa', 'Admiradora',1),
-('Diego', 40, 'Professor', 0, 'Criticado por Joana em público', 'Respeito',1),
-('Elisa', 38, 'Médica', 0, 'Amiga de infância de Joana', 'Lealdade',1),
-('Gabriela', 28, 'Artista', 0, 'Rejeitada por Joana em patrocínio artístico', 'Inveja da fama',1),
-('Fábio', 36, 'Jornalista', 0, 'Publicou artigos difamatórios sobre Joana', 'Manipulação da imagem',1),
+INSERT INTO pessoas (nome, cor_cabelo, idade, profissao, divida, relacao_com_joana, motivo_oculto, suspeito) VALUES
+('Ana', Ruivo, 32, 'Advogada', 0, 'Amiga e conselheira legal de Joana', 'Nenhum',1),
+('Bruno', Preto, 45, 'Empresário', 5000, 'Devedor que Joana recusou ajudar', 'Ganância',1),
+('Clara', Loiro escuro, 20, 'Estudante', 200, 'Recebia ajuda de Joana, mas estava prestes a perder a bolsa', 'Admiradora',1),
+('Diego', Ruivo, 40, 'Professor', 0, 'Criticado por Joana em público', 'Respeito',1),
+('Elisa', Preto, 38, 'Médica', 0, 'Amiga de infância de Joana', 'Lealdade',1),
+('Gabriela', Ruivo, 28, 'Artista', 0, 'Rejeitada por Joana em patrocínio artístico', 'Inveja da fama',1),
+('Fábio', Preto, Castanho escuro, 36, 'Jornalista', 0, 'Publicou artigos difamatórios sobre Joana', 'Manipulação da imagem',1),
 ('Henrique', 42, 'Segurança', 0, 'Funcionário da Mansão que sabia de segredos', 'Obediência',1);
 
 INSERT INTO locais (nome) VALUES

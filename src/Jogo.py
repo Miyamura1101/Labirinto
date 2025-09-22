@@ -5,7 +5,7 @@ from Puzzles import PuzzleSQL
 
 dicas = [
     "🔍 Guardanapo com manchas de tinta colorida e um rascunho de pintura. Alguém parecia nervoso.",
-    "🔍 Um prendedor de cabelo delicado. Parece que alguém deixou cair às pressas.",
+    "🔍 Um prendedor de cabelo delicado com um cabelo ruivo enrolado. Parece que alguém deixou cair às pressas.",
     "🔍 Pulseira com pedras coloridas quebrada, como se tivesse sido puxada com força durante uma discussão."
 ]
 
