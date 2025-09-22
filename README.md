@@ -56,8 +56,10 @@ python3 src/main.py
 - Será apresentada uma pergunta estilo detetive, por exemplo:
 
 - "O roubo aconteceu no Museu no dia 2025-09-10. Descubra quem estava no Museu nesse dia."
+  
+- Digite a resposta correta (nomes separados por vírgula), por exemplo:
 
-- Digite a resposta correta (nomes separados por vírgula).
+- Ana, Bruno
 
 - Ao acertar, a posição se transforma em 'L' e você coleta uma chave.
 
