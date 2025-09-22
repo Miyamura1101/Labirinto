@@ -1,0 +1,23 @@
+[
+    {
+      "pergunta": "O ladrão deve ser alguém que esteve no Museu no dia do roubo (2025-09-10) e também foi visto no Banco em algum momento. Quem é o principal suspeito?",
+      "resposta_esperada": [["Bruno"]]
+    },
+    {
+      "pergunta": "Liste todas as pessoas que já visitaram dois ou mais locais diferentes.",
+      "resposta_esperada": [["Bruno"]]
+    },
+    {
+      "pergunta": "Mostre o nome da pessoa que possui a maior dívida registrada.",
+      "resposta_esperada": [["Bruno"]]
+    },
+    {
+      "pergunta": "Liste as pessoas que nunca estiveram no Museu.",
+      "resposta_esperada": [["Clara"], ["Diego"], ["Elisa"]]
+    },
+    {
+      "pergunta": "Quem visitou o Museu no dia do roubo (2025-09-10) mas nunca esteve na Biblioteca?",
+      "resposta_esperada": [["Ana"], ["Bruno"]]
+    }
+  ]
+  

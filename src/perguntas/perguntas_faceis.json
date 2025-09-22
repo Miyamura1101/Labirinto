@@ -1,0 +1,23 @@
+[
+    {
+      "pergunta": "O roubo aconteceu no Museu no dia 2025-09-10. Descubra quem estava no Museu nesse dia.",
+      "resposta_esperada": [["Ana"], ["Bruno"]]
+    },
+    {
+      "pergunta": "Liste todas as pessoas que não possuem dívidas no banco.",
+      "resposta_esperada": [["Ana"], ["Diego"], ["Elisa"]]
+    },
+    {
+      "pergunta": "Mostre os nomes de todas as pessoas registradas no banco de dados.",
+      "resposta_esperada": [["Ana"], ["Bruno"], ["Clara"], ["Diego"], ["Elisa"]]
+    },
+    {
+      "pergunta": "Quem esteve na Biblioteca no dia 2025-09-10?",
+      "resposta_esperada": [["Diego"]]
+    },
+    {
+      "pergunta": "Quais pessoas possuem alguma dívida (valor maior que zero)?",
+      "resposta_esperada": [["Bruno"], ["Clara"]]
+    }
+  ]
+  

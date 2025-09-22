@@ -1,0 +1,23 @@
+[
+    {
+      "pergunta": "Entre os que estavam no Museu no dia do roubo (2025-09-10), descubra quem tinha dívidas no banco.",
+      "resposta_esperada": [["Bruno"]]
+    },
+    {
+      "pergunta": "Descubra quem visitou o Banco no dia seguinte ao roubo (2025-09-11).",
+      "resposta_esperada": [["Bruno"]]
+    },
+    {
+      "pergunta": "Liste as pessoas que já visitaram o Museu em qualquer data.",
+      "resposta_esperada": [["Ana"], ["Bruno"]]
+    },
+    {
+      "pergunta": "Quem esteve no Banco em 2025-09-10?",
+      "resposta_esperada": [["Clara"]]
+    },
+    {
+      "pergunta": "Liste os nomes e profissões das pessoas que possuem dívidas.",
+      "resposta_esperada": [["Bruno", "Empresário"], ["Clara", "Estudante"]]
+    }
+  ]
+  
