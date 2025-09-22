@@ -1,0 +1,71 @@
+1. Ana – Advogada
+Idade: 32
+Cabelo: Castanho escuro, liso
+Olhos: Verdes
+Altura: 1,68m
+Traços de personalidade: Inteligente, persuasiva, calma sob pressão, ética profissional elevada
+Detalhes extras: Sempre carrega uma pasta de documentos, gosta de chá de camomila. 
+                 Amiga leal de Joana e conselheira legal.
+
+2. Bruno – Empresário
+Idade: 45
+Cabelo: Preto, levemente grisalho nas têmporas
+Olhos: Castanhos
+Altura: 1,80m
+Traços de personalidade: Ambicioso, impulsivo, persuasivo, focado em resultados financeiros
+Detalhes extras: Gosta de relógios caros e carros esportivos. 
+                 Estava desesperado por causa das dívidas com Joana.
+
+3. Clara – Estudante
+Idade: 20
+Cabelo: Loiro escuro, ondulado
+Olhos: Azuis
+Altura: 1,65m
+Traços de personalidade: Curiosa, tímida, estudiosa, leal
+Detalhes extras: Sempre carrega um caderno de anotações. 
+                 Admiradora de Joana, mas preocupada com sua bolsa de estudos.
+
+4. Diego – Professor
+Idade: 40
+Cabelo: Castanho claro, curto
+Olhos: Cinzentos
+Altura: 1,75m
+Traços de personalidade: Racional, crítico, reservado, respeitoso
+Detalhes extras: Usa óculos de armação preta, costuma fumar charutos nos fins de semana. 
+                 Foi criticado por Joana em público, mas mantém postura ética.
+
+5. Elisa – Médica
+Idade: 38
+Cabelo: Preto, liso e comprido
+Olhos: Castanhos escuros
+Altura: 1,70m
+Traços de personalidade: Compassiva, organizada, calma, confiável
+Detalhes extras: Sempre carrega um estetoscópio e cadernos de anotações médicas. 
+                 Amiga de infância de Joana.
+
+6. Gabriela – Artista
+Idade: 28
+Cabelo: Ruivo vibrante, ondulado
+Olhos: Verdes claros
+Altura: 1,67m
+Traços de personalidade: Criativa, impulsiva, competitiva, dramática
+Detalhes extras: Usa maquiagem chamativa e roupas coloridas. 
+                 Rejeitada por Joana em patrocínio artístico, sente inveja da fama dela.
+
+7. Fábio – Jornalista
+Idade: 36
+Cabelo: Castanho escuro, penteado para trás
+Olhos: Castanhos
+Altura: 1,78m
+Traços de personalidade: Persuasivo, curioso, estratégico, manipulador
+Detalhes extras: Sempre com gravador e bloco de anotações. 
+                 Publica artigos sensacionalistas e busca notícias para ganhar visibilidade.
+
+8. Henrique – Segurança
+Idade: 42
+Cabelo: Preto, raspado nas laterais
+Olhos: Castanhos escuros
+Altura: 1,85m
+Traços de personalidade: Observador, leal, discreto, disciplinado
+Detalhes extras: Sempre vestido com uniforme escuro, carrega rádio de comunicação. 
+                 Conhece todos os segredos da Mansão e segue ordens com rigor.

@@ -1,13 +1,11 @@
-from ast import If, While
 import os
 import random
 import re
 from Puzzles import PuzzleSQL
-from Sala import Sala
 
 dicas = [
     "🔍 Guardanapo com manchas de tinta colorida e um rascunho de pintura. Alguém parecia nervoso.",
-    "🔍 Bilhete rasgado mencionando um encontro 'na mansão à noite'.",
+    "🔍 Um prendedor de cabelo delicado. Parece que alguém deixou cair às pressas.",
     "🔍 Pulseira com pedras coloridas quebrada, como se tivesse sido puxada com força durante uma discussão."
 ]
 
@@ -16,7 +14,7 @@ class Jogo:
         self.salas = salas
         self.sala_atual = salas[0]  # Começa na sala 01
         self.jogador_pos = self.sala_atual.posicao_jogador
-        self.chaves_coletadas = 3
+        self.chaves_coletadas = 0
         self.dicas_disponiveis = dicas[:]
         self.dicas_por_posicao = {}
 
@@ -89,9 +87,9 @@ class Jogo:
             linha_str = ""
             for j, cel in enumerate(linha):
                 if (i, j) == self.jogador_pos:
-                    linha_str += "P "
+                    linha_str += " P "
                 else:
-                    linha_str += f"{cel} "
+                    linha_str += f" {cel} "
             print(linha_str.rstrip())
         print(f"Chaves coletadas: {self.chaves_coletadas}")
     

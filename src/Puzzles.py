@@ -21,11 +21,9 @@ class PuzzleSQL:
         return random.choice(puzzles)
 
     def validar_resposta(resposta_jogador, resposta_esperada):
-        # Normaliza entrada do jogador: separa por vírgula, remove espaços e baixa caixa
+    
         resposta_lista = [x.strip().lower() for x in resposta_jogador.split(",") if x.strip()]
 
-        # Normaliza resposta esperada do JSON
-        # Aceita tanto ["Ana", "Bruno"] quanto [["Ana"], ["Bruno"]]
         if resposta_esperada and isinstance(resposta_esperada[0], list):
             esperado_flat = [str(item[0]).strip().lower() for item in resposta_esperada if item]
         else:
