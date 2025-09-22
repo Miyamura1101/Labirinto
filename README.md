@@ -16,12 +16,13 @@ Um jogo educativo em Python para ensinar lógica e resolução de problemas esti
 
 ## 📦 Pré-requisitos / Instalação
 
-1. **Python 3.9+** (recomendado)  
-2. Instale dependências via pip:
-
-```bash
-pip install colorama
+1. **Python 3.9+**
 ```
+sudo apt update
+sudo apt install python3
+python3 --version
+```  
+
 # 🕹 Como Jogar
 1. Abra o terminal e execute - python src/main.py
 
