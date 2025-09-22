@@ -10,8 +10,7 @@ class Sala:
         self.enigmas = self.encontrar_todos('E')
         self.dicas = self.encontrar_todos('D')
         self.chaves = self.encontrar_todos('K')
-        self.protas_livres = self.encontrar_todos('L')
-        
+        self.portas = {}
 
     def encontrar(self, simbolo):
         """Retorna a primeira posição (linha, coluna) de um símbolo"""

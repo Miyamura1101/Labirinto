@@ -44,9 +44,14 @@ class Jogo:
             if outras_posicoes:
                 nova_sala, nova_pos = random.choice(outras_posicoes)
                 i_nova, j_nova = nova_pos
-    
+
+                sala_antiga = self.sala_atual
+                sala_antiga.portas[(i_atual, j_atual)] = (nova_sala, (i_nova, j_nova))
+
                 self.sala_atual = nova_sala
                 self.jogador_pos = nova_pos
+
+                nova_sala.portas[(i_nova, j_nova)] = (sala_antiga, (i_atual, j_atual))
                 
                 # Marca a posição de destino como 'L'
                 self.sala_atual.grid[i_nova][j_nova] = 'L'
@@ -55,7 +60,6 @@ class Jogo:
             return mensagem
         else:
             return "❌ Resposta incorreta."
-
 
     def mostrar(self):
         """Mostra a sala atual com a posição do jogador"""
@@ -107,6 +111,15 @@ class Jogo:
             # marca a chave como coletada
             self.sala_atual.grid[i][j] = "."
             return f"Você coletou uma CHAVE! Total = {self.chaves_coletadas}"
+        elif celula == "L":
+            destino = self.sala_atual.portas.get((i, j))
+            if destino:
+                sala_destino, pos_destino = destino
+                self.sala_atual = sala_destino
+                self.jogador_pos = pos_destino
+                return f"🚪 Você entrou na sala {sala_destino.nome}!"
+            else:
+                return "Esta porta ainda está trancada. Resolva um enigma para liberá-la."
         else:
             return "Andou para um espaço vazio."
     
