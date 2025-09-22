@@ -2,7 +2,7 @@
 
 Um jogo educativo em Python para ensinar lógica e resolução de problemas estilo SQL, usando uma narrativa de detetive. O objetivo é explorar salas, resolver enigmas e coletar chaves para finalmente abrir a saída da mansão.
 
----
+
 
 ## 🎯 Objetivo do Jogo
 
@@ -10,9 +10,8 @@ Um jogo educativo em Python para ensinar lógica e resolução de problemas esti
 - Cada sala possui enigmas (`E`) que representam puzzles de detetive.  
 - Ao resolver um enigma, você coleta uma chave e a posição do enigma se transforma em uma porta liberada (`L`).  
 - Algumas portas (`L`) conectam diferentes salas, criando caminhos bifurcados.  
-- O objetivo final é coletar **3 chaves** para abrir a saída (`X`) e concluir o jogo.  
-
----
+- O objetivo final é coletar **3 chaves** para abrir a saída (`X`) e concluir o jogo.
+  
 
 ## 📦 Pré-requisitos / Instalação
 
