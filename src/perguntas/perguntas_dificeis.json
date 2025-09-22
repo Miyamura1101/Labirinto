@@ -1,23 +1,42 @@
 [
-    {
-      "pergunta": "O ladrão deve ser alguém que esteve no Museu no dia do roubo (2025-09-10) e também foi visto no Banco em algum momento. Quem é o principal suspeito?",
-      "resposta_esperada": [["Bruno"]]
-    },
-    {
-      "pergunta": "Liste todas as pessoas que já visitaram dois ou mais locais diferentes.",
-      "resposta_esperada": [["Bruno"]]
-    },
-    {
-      "pergunta": "Mostre o nome da pessoa que possui a maior dívida registrada.",
-      "resposta_esperada": [["Bruno"]]
-    },
-    {
-      "pergunta": "Liste as pessoas que nunca estiveram no Museu.",
-      "resposta_esperada": [["Clara"], ["Diego"], ["Elisa"]]
-    },
-    {
-      "pergunta": "Quem visitou o Museu no dia do roubo (2025-09-10) mas nunca esteve na Biblioteca?",
-      "resposta_esperada": [["Ana"], ["Bruno"]]
-    }
-  ]
-  
+  {
+    "pergunta": "Quem esteve na Mansão Aurora no dia do crime, mas não possui álibi em outro local?",
+    "resposta_esperada": [["Bruno"], ["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Excluindo as pessoas com álibi (Hospital ou Biblioteca no dia do crime), quem permanece como suspeito?",
+    "resposta_esperada": [["Bruno"], ["Gabriela"], ["Henrique"], ["Fábio"]]
+  },
+  {
+    "pergunta": "Quem foi visto em mais de um local ao longo dos dois dias de registros?",
+    "resposta_esperada": [["Ana"], ["Bruno"], ["Clara"], ["Diego"], ["Elisa"], ["Fábio"], ["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Quem é funcionário da Mansão e também estava presente no dia do crime?",
+    "resposta_esperada": [["Henrique"]]
+  },
+  {
+    "pergunta": "Quem nunca apareceu nos registros da Mansão Aurora?",
+    "resposta_esperada": [["Ana"], ["Clara"], ["Diego"], ["Elisa"], ["Fábio"]]
+  },
+  {
+    "pergunta": "Quem é jornalista e estava em outro local que não a Mansão no dia do crime?",
+    "resposta_esperada": [["Fábio"]]
+  },
+  {
+    "pergunta": "Quem foi visto no Clube Noturno em 2025-09-10 mas não apareceu em nenhum registro no dia do crime?",
+    "resposta_esperada": [["Diego"]]
+  },
+  {
+    "pergunta": "Quem não possuía dívidas mas ainda assim esteve na Mansão no dia 2025-09-11?",
+    "resposta_esperada": [["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Quem poderia ser inocentado porque estava no mesmo local em ambos os dias, mas nunca na Mansão?",
+    "resposta_esperada": [["Clara"], ["Elisa"], ["Fábio"]]
+  },
+  {
+    "pergunta": "Considerando todas as pistas, quem é o principal suspeito com motivo (dívida) e oportunidade (presença na Mansão no dia do crime)?",
+    "resposta_esperada": [["Bruno"]]
+  }
+]

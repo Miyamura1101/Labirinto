@@ -1,8 +1,16 @@
+Drop TABLE Customers;
+Drop TABLE Orders;
+Drop TABLE Shippings;
+
 CREATE TABLE pessoas (
     id INTEGER PRIMARY KEY,
     nome TEXT,
+    idade INTEGER,
     profissao TEXT,
-    divida REAL
+    divida REAL,
+    relacao_com_joana TEXT,
+    motivo_oculto TEXT,
+    suspeito INTEGER CHECK (suspeito IN (0, 1))
 );
 
 CREATE TABLE locais (
@@ -19,19 +27,38 @@ CREATE TABLE visitas (
     FOREIGN KEY (local_id) REFERENCES locais(id)
 );
 
-INSERT INTO pessoas (nome, profissao, divida) VALUES
-('Ana', 'Advogada', 0),
-('Bruno', 'Empresário', 5000),
-('Clara', 'Estudante', 200),
-('Diego', 'Professor', 0),
-('Elisa', 'Médica', 0);
+INSERT INTO pessoas (nome, idade, profissao, divida, relacao_com_joana, motivo_oculto, suspeito) VALUES
+('Ana', 32, 'Advogada', 0, 'Amiga e conselheira legal de Joana', 'Nenhum',1),
+('Bruno', 45, 'Empresário', 5000, 'Devedor que Joana recusou ajudar', 'Ganância',1),
+('Clara', 20, 'Estudante', 200, 'Recebia ajuda de Joana, mas estava prestes a perder a bolsa', 'Admiradora',1),
+('Diego', 40, 'Professor', 0, 'Criticado por Joana em público', 'Respeito',1),
+('Elisa', 38, 'Médica', 0, 'Amiga de infância de Joana', 'Lealdade',1),
+('Gabriela', 28, 'Artista', 0, 'Rejeitada por Joana em patrocínio artístico', 'Inveja da fama',1),
+('Fábio', 36, 'Jornalista', 0, 'Publicou artigos difamatórios sobre Joana', 'Manipulação da imagem',1),
+('Henrique', 42, 'Segurança', 0, 'Funcionário da Mansão que sabia de segredos', 'Obediência',1);
 
 INSERT INTO locais (nome) VALUES
-('Museu'), ('Banco'), ('Biblioteca');
+('Mansão Aurora'),
+('Hospital Municipal'),
+('Biblioteca Central'),
+('Café Central'),
+('Comissaria de Polícia'),
+('Clube Noturno');
 
 INSERT INTO visitas (pessoa_id, local_id, data) VALUES
-(1, 1, '2025-09-10'), -- Ana no Museu
-(2, 1, '2025-09-10'), -- Bruno no Museu
-(3, 2, '2025-09-10'), -- Clara no Banco
-(4, 3, '2025-09-10'), -- Diego na Biblioteca
-(2, 2, '2025-09-11'); -- Bruno no Banco
+(1, 3, '2025-09-10'), -- Ana na Biblioteca
+(2, 4, '2025-09-10'), -- Bruno no Café
+(3, 3, '2025-09-10'), -- Clara na Biblioteca
+(4, 6, '2025-09-10'), -- Diego no Clube Noturno
+(5, 2, '2025-09-10'), -- Elisa no Hospital
+(7, 4, '2025-09-10'), -- Fábio no Café
+(6, 6, '2025-09-10'), -- Gabriela no Clube Noturno
+(8, 1, '2025-09-10'); -- Henrique na Mansão
+
+INSERT INTO visitas (pessoa_id, local_id, data) VALUES
+(2, 1, '2025-09-11'), -- Bruno na Mansão
+(8, 1, '2025-09-11'), -- Henrique na Mansão
+(5, 2, '2025-09-11'), -- Elisa no Hospital (álibi)
+(3, 3, '2025-09-11'), -- Clara na Biblioteca (álibi parcial)
+(6, 1, '2025-09-11'), -- Gabriela na Mansão
+(7, 4, '2025-09-11'), -- Fábio no Café

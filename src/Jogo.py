@@ -1,15 +1,24 @@
+from ast import If, While
 import os
 import random
+import re
 from Puzzles import PuzzleSQL
 from Sala import Sala
 
+dicas = [
+    "🔍 Guardanapo com manchas de tinta colorida e um rascunho de pintura. Alguém parecia nervoso.",
+    "🔍 Bilhete rasgado mencionando um encontro 'na mansão à noite'.",
+    "🔍 Pulseira com pedras coloridas quebrada, como se tivesse sido puxada com força durante uma discussão."
+]
 
 class Jogo:
     def __init__(self, salas):
         self.salas = salas
         self.sala_atual = salas[0]  # Começa na sala 01
         self.jogador_pos = self.sala_atual.posicao_jogador
-        self.chaves_coletadas = 0
+        self.chaves_coletadas = 3
+        self.dicas_disponiveis = dicas[:]
+        self.dicas_por_posicao = {}
 
     def processar_enigma(self):
         if self.chaves_coletadas == 0:
@@ -61,6 +70,19 @@ class Jogo:
         else:
             return "❌ Resposta incorreta."
 
+    def processar_dica(self, i, j):
+        chave = (self.sala_atual.nome, i, j)
+        
+        if chave in  self.dicas_por_posicao:
+            print(self.dicas_por_posicao[chave])
+        else:
+            if self.dicas_disponiveis:
+                dica = self.dicas_disponiveis.pop(0)  # pega a próxima disponível
+                self.dicas_por_posicao[chave] = dica
+                print(dica)
+            else:
+                print("🔍 Nenhuma nova pista encontrada aqui.")
+ 
     def mostrar(self):
         """Mostra a sala atual com a posição do jogador"""
         for i, linha in enumerate(self.sala_atual.grid):
@@ -105,7 +127,11 @@ class Jogo:
         if celula == "E":
             input(self.processar_enigma())
         elif celula == "D":
-            return "Você encontrou uma DICA!"
+            i, j = self.jogador_pos
+            self.processar_dica(i, j)
+            return input("Pressione Enter para continuar...")
+        elif celula == "X":
+            self.processar_saida()
         elif celula == "K":
             self.chaves_coletadas += 1
             # marca a chave como coletada
@@ -117,12 +143,33 @@ class Jogo:
                 sala_destino, pos_destino = destino
                 self.sala_atual = sala_destino
                 self.jogador_pos = pos_destino
-                return f"🚪 Você entrou na sala {sala_destino.nome}!"
+                return ""
             else:
                 return "Esta porta ainda está trancada. Resolva um enigma para liberá-la."
         else:
             return "Andou para um espaço vazio."
     
+    def processar_saida(self):
+        if self.chaves_coletadas < 3:
+            return input("A porta está trancada. Você precisa de 3 chaves para sair!")
+
+        print("Voce chegou ao local final. Quem matou Joana?")
+
+        tentativas = 2
+        resposta_correta = "Gabriela"
+
+        while tentativas > 0:
+            resposta = input(f"Tentativa ({tentativas} restantes): ")
+
+            if resposta.lower() == resposta_correta.lower():
+                print("\nCorreto! Você descubriu quem foi a responsavel pela morte de Joana.")
+                return input("Parabéns, vecê venceu o jogo!\n")
+            else:
+                tentativas -= 1
+                if tentativas > 0:
+                    print("Essa não é a resposta correta. Tente novamente.")
+
+        return input("Você falhou em identificar o culpado. O mistério continua sem solução...")
 
     def jogar(self):
         print("=== Jogo SQL ===")

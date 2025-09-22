@@ -1,23 +1,42 @@
 [
     {
-      "pergunta": "O roubo aconteceu no Museu no dia 2025-09-10. Descubra quem estava no Museu nesse dia.",
-      "resposta_esperada": [["Ana"], ["Bruno"]]
+      "pergunta": "Quem visitou a Mansão Aurora no dia 2025-09-11?",
+      "resposta_esperada": [["Bruno"], ["Gabriela"], ["Henrique"]]
     },
     {
-      "pergunta": "Liste todas as pessoas que não possuem dívidas no banco.",
-      "resposta_esperada": [["Ana"], ["Diego"], ["Elisa"]]
+      "pergunta": "Quem visitou a Biblioteca no dia 2025-09-11?",
+      "resposta_esperada": [["Clara"]]
     },
     {
-      "pergunta": "Mostre os nomes de todas as pessoas registradas no banco de dados.",
-      "resposta_esperada": [["Ana"], ["Bruno"], ["Clara"], ["Diego"], ["Elisa"]]
+      "pergunta": "Quem visitou o Hospital Municipal no dia 2025-09-11?",
+      "resposta_esperada": [["Elisa"]]
     },
     {
-      "pergunta": "Quem esteve na Biblioteca no dia 2025-09-10?",
-      "resposta_esperada": [["Diego"]]
+      "pergunta": "Quem estava no Café Central no dia 2025-09-11?",
+      "resposta_esperada": [["Fábio"]]
     },
     {
-      "pergunta": "Quais pessoas possuem alguma dívida (valor maior que zero)?",
+      "pergunta": "Liste todas as pessoas que têm alguma dívida.",
       "resposta_esperada": [["Bruno"], ["Clara"]]
+    },
+    {
+      "pergunta": "Quem é advogado(a) na cidade?",
+      "resposta_esperada": [["Ana"]]
+    },
+    {
+      "pergunta": "Quem é médico(a) na cidade?",
+      "resposta_esperada": [["Elisa"]]
+    },
+    {
+      "pergunta": "Quem esteve no Clube Noturno no dia 2025-09-10?",
+      "resposta_esperada": [["Diego"], ["Gabriela"]]
+    },
+    {
+      "pergunta": "Qual estudante aparece nos registros?",
+      "resposta_esperada": [["Clara"]]
+    },
+    {
+      "pergunta": "Quais amigos de infância de Joana aparecem nos registros?",
+      "resposta_esperada": [["Elisa"]]
     }
-  ]
-  
+]

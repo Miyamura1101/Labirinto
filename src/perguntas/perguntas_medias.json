@@ -1,23 +1,42 @@
 [
-    {
-      "pergunta": "Entre os que estavam no Museu no dia do roubo (2025-09-10), descubra quem tinha dívidas no banco.",
-      "resposta_esperada": [["Bruno"]]
-    },
-    {
-      "pergunta": "Descubra quem visitou o Banco no dia seguinte ao roubo (2025-09-11).",
-      "resposta_esperada": [["Bruno"]]
-    },
-    {
-      "pergunta": "Liste as pessoas que já visitaram o Museu em qualquer data.",
-      "resposta_esperada": [["Ana"], ["Bruno"]]
-    },
-    {
-      "pergunta": "Quem esteve no Banco em 2025-09-10?",
-      "resposta_esperada": [["Clara"]]
-    },
-    {
-      "pergunta": "Liste os nomes e profissões das pessoas que possuem dívidas.",
-      "resposta_esperada": [["Bruno", "Empresário"], ["Clara", "Estudante"]]
-    }
-  ]
-  
+  {
+    "pergunta": "Quem estava na Mansão Aurora no dia do crime e também tem dívidas?",
+    "resposta_esperada": [["Bruno"]]
+  },
+  {
+    "pergunta": "Quem esteve na Mansão Aurora no dia 2025-09-11 mas não tem dívidas?",
+    "resposta_esperada": [["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Quem tinha álibi no dia 2025-09-11 por estar no Hospital Municipal?",
+    "resposta_esperada": [["Elisa"]]
+  },
+  {
+    "pergunta": "Quem foi visto no Café Central tanto em 2025-09-10 quanto em 2025-09-11?",
+    "resposta_esperada": [["Fábio"]]
+  },
+  {
+    "pergunta": "Quem foi visto na Mansão Aurora em 2025-09-10 e também em 2025-09-11?",
+    "resposta_esperada": [["Henrique"]]
+  },
+  {
+    "pergunta": "Liste todos os suspeitos que não possuem dívida.",
+    "resposta_esperada": [["Ana"], ["Diego"], ["Elisa"], ["Fábio"], ["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Quem era artista e esteve na Mansão no dia do crime?",
+    "resposta_esperada": [["Gabriela"]]
+  },
+  {
+    "pergunta": "Quem é professor e esteve no Clube Noturno no dia 2025-09-10?",
+    "resposta_esperada": [["Diego"]]
+  },
+  {
+    "pergunta": "Quem esteve em locais diferentes nos dois dias (2025-09-10 e 2025-09-11)?",
+    "resposta_esperada": [["Bruno"], ["Clara"], ["Elisa"], ["Fábio"], ["Gabriela"], ["Henrique"]]
+  },
+  {
+    "pergunta": "Quem possuía relação conflituosa com Joana e esteve na Mansão Aurora no dia 2025-09-11?",
+    "resposta_esperada": [["Bruno"], ["Gabriela"]]
+  }
+]
