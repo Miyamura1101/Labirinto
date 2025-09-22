@@ -23,8 +23,10 @@ python3 --version
 ```  
 
 # 🕹 Como Jogar
-1. Abra o terminal e execute - python src/main.py
-
+1. Abra o terminal e execute
+```
+python src/main.py
+```
 2. Use as teclas para mover o personagem:
 
 | Tecla | Movimento |
